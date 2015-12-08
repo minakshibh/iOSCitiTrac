@@ -1,0 +1,48 @@
+//
+//  QRPatrol.pch
+//  QRPatrol
+//
+//  Created by Br@R on 31/03/15.
+//  Copyright (c) 2015 Krishnais. All rights reserved.
+//
+
+
+
+
+#import <Availability.h>
+#import"AppDelegate.h"
+#import "DatabaseClass.h"
+
+#define QRPatrol_QRPatrol_Prefix_pch
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#endif
+
+#define Kwebservices @"http://app.mysecurityguards.com"
+
+#define kappDelegate (AppDelegate *)[[UIApplication sharedApplication] delegate]
+
+//#define kdatabase (DatabaseClass *)[UIApplication sharedApplication]
+
+
+#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define IS_RETINA ([[UIScreen mainScreen] scale] >= 2.0)
+
+#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
+#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
+#define SCREEN_MAX_LENGTH (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
+#define SCREEN_MIN_LENGTH (MIN(SCREEN_WIDTH, SCREEN_HEIGHT))
+
+#define IS_IPHONE_4_OR_LESS (IS_IPHONE && SCREEN_MAX_LENGTH < 568.0)
+#define IS_IPHONE_5 (IS_IPHONE && SCREEN_MAX_LENGTH == 568.0)
+#define IS_IPHONE_6 (IS_IPHONE && SCREEN_MAX_LENGTH == 667.0)
+#define IS_IPHONE_6P (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
+
+#define kAPIKey @"AIzaSyARfvZ_reZBbuEILzSR9nSO6b0LdYUB0NE"
